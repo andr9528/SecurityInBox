@@ -3,36 +3,27 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SecurityInAMobile.SettingsPage">
     <ContentPage.Content>
-        <ScrollView>
-            <Grid>
+        <ScrollView BackgroundColor="#EEEEEE">
+            <Grid BackgroundColor="#EEEEEE">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="30*" />
-                    <RowDefinition Height="30" />
-                    <RowDefinition Height="30" />
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="80" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                
-                <!-- <BoxView Color="#FF3399" Grid.Column="1"/> -->               
 
-                <Label  Text="Devices"
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        Grid.ColumnSpan="2"
-                        XAlign ="Center" />
+                <!--This is for options Regarding the Devices-->
+                <Label Text="Devices" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Center" TextColor="Black" VerticalOptions="Center"/>
 
-                <Label  Text="Allow Devices"    
-                        Grid.Row="1"
-                        Grid.Column="0"
-                        XAlign ="Center" />
-            
-                <Switch  x:Name="DeviceAllowedSetting"    
-                         Grid.Row="1"
-                         Grid.Column="1"
-                         XAlign ="Center" />
-            
+                <Label Text="Default setting for New Devices" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" TextColor="Black" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+
+                <Picker x:Name="DeviceAllowedSetting" Grid.Row="1" Grid.Column="1" HorizontalOptions="CenterAndExpand" BackgroundColor="#0F5896" TextColor="White" WidthRequest="175"/>
+
+                <Button x:Name="ShowDisapprovedDevices" Grid.Column="1" Grid.Row="2" HorizontalOptions="CenterAndExpand" BackgroundColor="#0F5896" TextColor="White" Text="Show Only Disapproved Devices"/>
+
             </Grid>
         </ScrollView>
     </ContentPage.Content>

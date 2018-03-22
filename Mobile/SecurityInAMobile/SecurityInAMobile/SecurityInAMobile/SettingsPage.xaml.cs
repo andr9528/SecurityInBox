@@ -12,9 +12,13 @@ namespace SecurityInAMobile
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class SettingsPage : ContentPage
 	{
-		public SettingsPage ()
+        string[] deviceallowedoptions = new string[2] {"Approve All New", "Disapprove All New"};
+		public SettingsPage()
 		{
 			InitializeComponent();
+
+            DeviceAllowedSetting.ItemsSource = deviceallowedoptions;
+            DeviceAllowedSetting.SelectedIndex = 0;
 		}
 	}
 }
