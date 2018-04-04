@@ -3,3 +3,22 @@ html{
     background-color: #EEEEEE;
     background-size: cover;
 }
+
+body
+{
+    font-family: "Verdana";
+}
+
+div.container{
+    margin: 50px auto;
+    min-height: 90vh;
+    text-align: center;
+    width: 75%;
+    height: 90%;
+    box-shadow: 0px 3px 8px 0px rgba(50, 50, 50, 0.37);
+    padding-top: 20px;
+    background-color: #F9F9F9;
+    font-size: 200%;
+    font-weight: bold;
+    color: #0F5896;
+}
