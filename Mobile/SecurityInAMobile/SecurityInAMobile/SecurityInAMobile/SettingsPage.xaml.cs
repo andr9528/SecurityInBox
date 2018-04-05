@@ -17,8 +17,21 @@ namespace SecurityInAMobile
 		{
 			InitializeComponent();
 
-            DeviceAllowedSetting.ItemsSource = deviceallowedoptions;
-            DeviceAllowedSetting.SelectedIndex = 0;
+            LoadSettingsFromDB();
+            
 		}
-	}
+
+        private void LoadSettingsFromDB()
+        {
+            // Things that is always gonna happen regardless of settings in the Database 
+            DeviceAllowedSetting.ItemsSource = deviceallowedoptions;
+
+            // Loading the settings from the Database
+
+            //Psedu setup for testing Purposes
+            DeviceAllowedSetting.SelectedIndex = 1;
+            DevicesConnectSwitch.IsToggled = true;
+            SendNotifySwitch.IsToggled = true;
+        }
+    }
 }
