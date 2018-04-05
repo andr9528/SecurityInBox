@@ -1,0 +1,53 @@
+html{
+    min-height: 100%;
+    background-color: #EEEEEE;
+    background-size: cover;
+}
+
+body
+{
+    font-family: "Verdana";
+}
+
+div.container{
+    margin: 0px auto;
+    min-height: 80vh;
+    text-align: center;
+    width: 75%;
+    box-shadow: 0px 3px 8px 0px rgba(50, 50, 50, 0.37);
+    padding-top: 20px;
+    background-color: #F9F9F9;
+    font-size: 200%;
+    font-weight: bold;
+    color: #0F5896;
+}
+
+.button{
+    background-color: #0F5896;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 90px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+div.bar{
+    padding-top: 10px;
+    background-color: #0F5896;
+    min-height: 5vh;
+    text-align: center;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    width:75%;
+    margin: 0 auto;
+    
+}
