@@ -5,7 +5,9 @@
              x:Class="SecurityInAMobile.MainPage">
     <StackLayout BackgroundColor="Azure">
 
-        <Label Text="im main page" Margin="100,100,40,0" TextColor="Black" FontSize="20">
+        <Label Text="im main page" Margin="100,0,100,0" TextColor="Black" FontSize="20"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center">
            
         </Label>
         

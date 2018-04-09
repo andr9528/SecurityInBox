@@ -18,7 +18,7 @@ namespace SecurityInAMobile
             
 		}
 
-        private void discoonctButton_Clicked(object sender, EventArgs e)
+        private void DiscoonctButton_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new MainPage());
         }

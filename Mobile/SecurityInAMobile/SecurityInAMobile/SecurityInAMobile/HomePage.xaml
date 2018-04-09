@@ -4,12 +4,14 @@
              x:Class="SecurityInAMobile.HomePage">
     <ContentPage.Content>
         <Grid BackgroundColor="Azure">
-            <StackLayout BackgroundColor="AliceBlue">
-                <Label Text="Welcome " 
-                   FontSize="20"
+            <StackLayout BackgroundColor="Aquamarine">
+                <Label Text=" Welcome  " 
+                   FontSize="30"
+                   HorizontalTextAlignment="Center"
                    FontAttributes="Bold"
                    FontFamily="Times New Roman"
-                   TextColor="Black" Margin="80,0,50,10"
+                   TextColor="Black" Margin="80,100,50,10"
+                       
                    x:Name="welcomeLable"
                    
                     >
@@ -20,9 +22,9 @@
                 <!--Margin="0,70,0,0" x:Name="homePageImg"/>-->
 
             </StackLayout>
-            <StackLayout BackgroundColor="AliceBlue" Margin="0,250,0,0">
+            <StackLayout BackgroundColor="Aquamarine" Margin="0,500,0,0">
                 <Button Text="DISCONNECT" 
-                        Clicked="discoonctButton_Clicked"   
+                        Clicked="DiscoonctButton_Clicked"   
                     BackgroundColor="CadetBlue"
                     TextColor="White"  Margin="70,0,50,10"  
                     FontSize="14"
