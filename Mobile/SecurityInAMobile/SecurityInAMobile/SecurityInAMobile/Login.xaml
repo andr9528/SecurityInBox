@@ -11,8 +11,8 @@
 
             <StackLayout Padding="15">
                 <Label Text="Box code" FontSize="Large" HorizontalOptions="Center" />
-                <Entry Placeholder="Input box code" />
-                <Button BackgroundColor="#0F5896" TextColor="White" Text="Login" FontSize="Medium"/>
+                <Entry Placeholder="Input box code" x:Name="boxCodeEntry"/>
+                <Button BackgroundColor="#0F5896" TextColor="White" Text="Login" FontSize="Medium" x:Name="LoginButton" Clicked="LoginButton_Clicked"/>
                 <Button BackgroundColor="#0F5896" TextColor="White" Text="QR Login" FontSize="Medium"/>
             </StackLayout>
         </StackLayout>
