@@ -2,9 +2,20 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SecurityInAMobile.App">
-	<Application.Resources>
+    <Application.Resources>
 
-		<!-- Application resource dictionary -->
+        <ResourceDictionary>
+            <ControlTemplate x:Key="ThemeMaster">
+                <StackLayout VerticalOptions="Start">
+                    <Image Source="burgerBlue.png"
+                           x:Name="burgerBluePicture"
+                           VerticalOptions="Start"
+                           HorizontalOptions="Start"
+                           
+                           />
 
-	</Application.Resources>
+                </StackLayout>
+            </ControlTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
 </Application>

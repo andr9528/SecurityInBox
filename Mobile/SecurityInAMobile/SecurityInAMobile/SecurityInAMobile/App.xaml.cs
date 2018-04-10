@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
@@ -13,10 +14,15 @@ namespace SecurityInAMobile
 		{
 			InitializeComponent();
 
-			MainPage = new SecurityInAMobile.MainPage();
-		}
+            MainPage = new MasterDetail();
+            
 
-		protected override void OnStart ()
+           // burgerBluePicture.GestureRecognizers.Add((new TapGestureRecognizer((view) => OnBurgerBlueClicked())));
+        }
+
+        
+
+        protected override void OnStart ()
 		{
 			// Handle when your app starts
 		}

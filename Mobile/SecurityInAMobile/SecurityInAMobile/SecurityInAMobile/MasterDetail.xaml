@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SecurityInAMobile"
+             x:Class="SecurityInAMobile.MasterDetail"
+                  Icon="burgerBlue.png">
+             <!--ControlTemplate="{StaticResource ThemeMaster}"-->
+
+    <MasterDetailPage.Master>
+        
+        <ContentPage BackgroundColor="#0F5896" Title="Master">
+            <ContentPage.Content >
+
+                <StackLayout Padding="100" BackgroundColor="White">
+                    
+                    <Button x:Name="test" Text="Page1" Clicked="Page1Clicked"></Button>
+                </StackLayout>
+               
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <ContentPage Title="Home"><!--ControlTemplate="{StaticResource ThemeMaster}"-->
+        <ContentPage.Content>
+            <StackLayout>
+                <Label Text="Home page is here. So add it!"></Label>
+                    
+            </StackLayout>
+        </ContentPage.Content>
+            
+        </ContentPage>
+    </MasterDetailPage.Detail>
+
+</MasterDetailPage>
