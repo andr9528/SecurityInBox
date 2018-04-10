@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using SecurityInAMobile;
-
 using Xamarin.Forms;
 
 namespace SecurityInAMobile
@@ -14,7 +14,11 @@ namespace SecurityInAMobile
 		{
 			InitializeComponent();
 
-			MainPage = new NavigationPage(new SecurityInAMobile.HomePage());
+			MainPage = new HomePage();
+
+            //Thread.Sleep(10000);
+
+            //MainPage = new SettingsPage();
 		}
 
 		protected override void OnStart ()

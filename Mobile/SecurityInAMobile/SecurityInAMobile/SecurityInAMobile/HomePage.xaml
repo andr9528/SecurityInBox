@@ -3,35 +3,30 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SecurityInAMobile.HomePage">
     <ContentPage.Content>
-        <Grid BackgroundColor="Azure">
-            <StackLayout BackgroundColor="Aquamarine">
-                <Label Text=" Welcome  " 
-                   FontSize="30"
-                   HorizontalTextAlignment="Center"
-                   FontAttributes="Bold"
-                   FontFamily="Times New Roman"
-                   TextColor="Black" Margin="80,100,50,10"
-                       
-                   x:Name="welcomeLable"
-                   
-                    >
+        <Grid BackgroundColor="#EEEEEE">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+<!--           
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+-->
+            
+            <Label Text="Welcome" FontSize="30" HorizontalTextAlignment="Center" FontAttributes="Bold" Grid.Row="0"
+                   FontFamily="Times New Roman" TextColor="Black" VerticalTextAlignment="Center" VerticalOptions="Center"
+                   HorizontalOptions="Center"/>
 
-                </Label>
-                <Image Source="security4.jpg"/>
+            <Image Source="security4.jpg" Grid.Row="1" VerticalOptions="Center"
+                   HorizontalOptions="Center"/>
                 <!--<Image Source="SecurityInAMobile\SecurityInAMobile\SecurityInAMobile\RE\DR\security 4.jpg"-->
                 <!--Margin="0,70,0,0" x:Name="homePageImg"/>-->
 
-            </StackLayout>
-            <StackLayout BackgroundColor="Aquamarine" Margin="0,500,0,0">
-                <Button Text="DISCONNECT" 
-                        Clicked="DiscoonctButton_Clicked"   
-                    BackgroundColor="CadetBlue"
-                    TextColor="White"  Margin="70,0,50,10"  
-                    FontSize="14"
-                    x:Name="discoonctButton"/>
-
-            </StackLayout>
-
+            <Button Text="DISCONNECT" Grid.Row="2" Clicked="DisconectButton_Clicked" BackgroundColor="#0F5896"
+                    TextColor="White" FontSize="14" x:Name="DisconectButton" 
+                    VerticalOptions="End" HorizontalOptions="CenterAndExpand"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

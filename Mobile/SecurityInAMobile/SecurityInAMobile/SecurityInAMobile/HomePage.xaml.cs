@@ -15,12 +15,13 @@ namespace SecurityInAMobile
 		public HomePage ()
 		{
 			InitializeComponent ();
+
+            
             
 		}
-
-        private void DiscoonctButton_Clicked(object sender, EventArgs e)
+        private void DisconectButton_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new MainPage());
+            Application.Current.MainPage = new SettingsPage(); // Change SettingsPage to Login
         }
     }
 }
