@@ -13,7 +13,7 @@ namespace SecurityInAMobile
 		{
 			InitializeComponent();
 
-			MainPage = new SecurityInAMobile.MainPage();
+			MainPage = new Login();
 		}
 
 		protected override void OnStart ()
