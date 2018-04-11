@@ -81,6 +81,7 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\humanIcon.png" />
     <AndroidResource Include="Resources\drawable\security4.jpg" />
   </ItemGroup>
   <Import Project="..\SecurityInAMobile\SecurityInAMobile.projitems" Label="Shared" />
