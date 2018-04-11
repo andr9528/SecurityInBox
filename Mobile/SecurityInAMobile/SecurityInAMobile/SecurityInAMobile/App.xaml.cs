@@ -14,11 +14,7 @@ namespace SecurityInAMobile
 		{
 			InitializeComponent();
 
-			MainPage = new HomePage();
-
-            //Thread.Sleep(10000);
-
-            //MainPage = new SettingsPage();
+			MainPage = new Login();
 		}
 
 		protected override void OnStart ()
