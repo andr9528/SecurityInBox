@@ -1,14 +1,17 @@
 import socket, sys
 from struct import *
 
-OwnIP = "10.140.72.38"
+OwnIP = "10.140.78.241"
 SSHPort = "22"
 
 #create an INET, STREAMing socket
 try:
-    s = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_TCP)
+    s = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_IP)
+    s.bind(("10.140.78.241", 0))
+    s.setsockopt(socket.IPPROTO_IP, socket.IP_HDRINCL, 1)
+    s.ioctl(socket.SIO_RCVALL, socket.RCVALL_ON)
 except socket.error , msg:
-    print 'Socket could not be created. Error Code : ' + str(msg[0]) + ' Message ' + msg[1]
+    print 'Socket could not be created.\n\rError Code : ' + str(msg[0]) + '\n\rMessage: ' + msg[1]
     sys.exit()
 
 # receive a packet
@@ -53,9 +56,9 @@ while True:
     #get data from the packet
     data = packet[h_size:]
 
-    if(str(dest_port) != SSHPort && str(s_addr) != OwnIP:
+    if(str(dest_port) != SSHPort and str(s_addr) != OwnIP):
      print 'Version : ' + str(version) + ' IP Header Length : ' + str(ihl) + ' TTL : ' + str(ttl) + ' Protocol : ' + str(protocol) + ' Source Address : ' + str(s_addr) + ' Destination Address : ' + str(d_addr)
      print 'Source Port : ' + str(source_port) + ' Dest Port : ' + str(dest_port) + ' Sequence Number : ' + str(sequence) + ' Acknowledgement : ' + str(acknowledgement) + ' TCP header length : ' + str(tcph_length)
-	 print 'Data : ' + data
+     print 'Data : ' + data
      print
 
