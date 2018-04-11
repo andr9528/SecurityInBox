@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SecurityInAMobile.Login"
+             BackgroundColor="#EEEEEE">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Padding="60">
+                <Image Source="humanIcon.png"/>
+            </StackLayout>
+
+            <StackLayout Padding="15">
+                <Label Text="Box code" FontSize="Large" HorizontalOptions="Center" />
+                <Entry Placeholder="Input box code" x:Name="boxCodeEntry"/>
+                <Button BackgroundColor="#0F5896" TextColor="White" Text="Login" FontSize="Medium" x:Name="LoginButton" Clicked="LoginButtonClick"/>
+                <Button BackgroundColor="#0F5896" TextColor="White" Text="QR Login" FontSize="Medium"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
