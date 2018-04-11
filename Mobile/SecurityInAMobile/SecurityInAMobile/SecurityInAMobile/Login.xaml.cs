@@ -19,7 +19,14 @@ namespace SecurityInAMobile
 
         private void LoginButtonClick(object sender, EventArgs e)
         {
-            
+            if (BoxCodeEntry.Text == "1234")
+            {
+                Application.Current.MainPage = new HomePage();
+            }
+            else
+            {
+                DisplayAlert("Warning", "Unknown Box Code", "Ok");
+            }
         }
     }
 }

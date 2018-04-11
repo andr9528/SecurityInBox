@@ -14,13 +14,13 @@ namespace SecurityInAMobile
 		{
 			InitializeComponent();
 
-			MainPage = new Login();
+			
 		}
 
 		protected override void OnStart ()
 		{
-			// Handle when your app starts
-		}
+            MainPage = new Login();
+        }
 
 		protected override void OnSleep ()
 		{
