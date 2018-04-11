@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SecurityInAMobile.SettingsPage">
+    <ContentPage.Content>
+        <ScrollView BackgroundColor="#EEEEEE">
+            <Grid BackgroundColor="#EEEEEE" x:Name="MainGrid">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Row="0" x:Name="DeviceGrid"> <!--This is for options Regarding the Devices-->
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="80" />
+                        <RowDefinition Height="80" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Devices" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Center" 
+                           TextColor="Black" VerticalOptions="Center"/>
+                    <Label Text="Default setting for New Devices" Grid.Row="1" Grid.Column="0" 
+                           HorizontalOptions="Center" TextColor="Black" VerticalOptions="Center" 
+                           HorizontalTextAlignment="Center"/>
+                    <Picker x:Name="DeviceAllowedSetting" Grid.Row="1" Grid.Column="1" HorizontalOptions="CenterAndExpand" 
+                            BackgroundColor="#0F5896" TextColor="White" WidthRequest="175"/>
+                    <Button x:Name="ShowDisapprovedDevices" Grid.Column="1" Grid.Row="2" 
+                            HorizontalOptions="CenterAndExpand" BackgroundColor="#0F5896" TextColor="White" 
+                            Text="Show Only Disapproved Devices"/>
+                </Grid>
+
+                <Grid Grid.Row="1" x:Name="NotificationGrid"> <!--This is for option Regarding the Notifications-->
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="80" />
+                        <RowDefinition Height="80" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Notifications" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
+                           HorizontalOptions="Center" TextColor="Black" VerticalOptions="Center"/>
+                    <Label Text="Send Notifications" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" 
+                           TextColor="Black" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+                    <Label Text="Show When Devices Connect" Grid.Row="2" Grid.Column="0" HorizontalOptions="Center" 
+                           TextColor="Black" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+                    <Switch Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" x:Name="SendNotifySwitch"/>
+                    <Switch Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" x:Name="DevicesConnectSwitch"/>
+
+                </Grid>
+                
+
+                
+                
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
