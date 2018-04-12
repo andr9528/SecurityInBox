@@ -18,7 +18,7 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
-	</Compile>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)CustomPickerRenderer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CustomSwitchRenderer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)HomePage.xaml.cs">
@@ -28,6 +28,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Repo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
       <SubType>Code</SubType>

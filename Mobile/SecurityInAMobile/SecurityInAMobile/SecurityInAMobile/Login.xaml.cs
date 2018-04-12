@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Xml;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -21,7 +22,14 @@ namespace SecurityInAMobile
         {
             if (BoxCodeEntry.Text == "1234")
             {
-                Environment.CurrentDirectory = "1234";
+                XmlWriter writer = XmlWriter.Create(Repo.FilePath);
+                writer.WriteStartDocument();
+                writer.WriteStartElement("Login");
+                writer.WriteString("1234");
+                writer.WriteEndElement();
+                writer.WriteEndDocument();
+                writer.Close();
+
                 Application.Current.MainPage = new HomePage();
             }
             else
