@@ -17,8 +17,7 @@ div.container{
     box-shadow: 0px 3px 8px 0px rgba(50, 50, 50, 0.37);
     padding-top: 20px;
     background-color: #F9F9F9;
-    font-size: 5vmin;
-    font-weight: bold;
+    font-size: 4vmin;
     color: #0F5896;
 }
 
@@ -46,7 +45,7 @@ div.bar{
     text-align: center;
     color: white;
     text-align: center;
-    font-size: 20px;
+    font-size: 3vmin;
     width:75%;
     margin: 0 auto;
     
@@ -56,10 +55,38 @@ table {
     font-family: "VerdanaS", sans-serif;
     border-collapse: collapse;
     width: 100%;
+    font-size: 3vmin;
 }
 
-td, th {
+th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
+    font-weight: bold
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.popup{
+    position: relative;
+    display: inline-block;
+    box-shadow: 0px 3px 8px 0px rgba(15, 88, 150, 0.60);
+    min-height: 20vh;
+    margin: 0px auto;
+    width: 60%;
+    margin-top: 50vmin;
+    margin-bottom: 5vmin;
+    
+}
+.popup .header{
+    background-color: #0F5896;
+    display: block;
+    margin: 0px auto;
+    width: 100%;
+    color: white;
+    font-family: "Verdana";
 }

@@ -1,10 +1,8 @@
 
 function getDevices()
 {
-    var devices = { Device1 : {deviceName: "Device1", IP: "127.0.0.1", status: "1"}, 
-                    Device2 : {deviceName: "Device2", IP: "127.0.0.2", status: "0"}
-                  };
-    
+    var devices = httpGet("http://securityinabox.tk/internal/api/getDevices.php");
+    console.log(devices);
     var devicesData = "";
     var deviceIndex;
     
@@ -15,11 +13,11 @@ function getDevices()
             var deviceData = ""; 
             
             
-            deviceData+= "<td>" + device["deviceName"] + "</td>";
+            deviceData+= "<td>" + device["Hostname"] + "</td>";
             
-            deviceData+="<td>"+device["IP"]+"</td>";
+            deviceData+="<td>"+device["CurIP"]+"</td>";
             
-            if(device["status"] == "1")
+            if(device["Status"] == "1")
                       {
 	                      deviceData += "<td>Approved</td>";
                       }
@@ -40,6 +38,15 @@ function getDevices()
     
 }
 
-
-
 getDevices();
+
+
+function httpGet(theUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return JSON.parse(xmlHttp.responseText);
+}
+
+
