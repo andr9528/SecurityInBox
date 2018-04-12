@@ -21,6 +21,7 @@ namespace SecurityInAMobile
         {
             if (BoxCodeEntry.Text == "1234")
             {
+                Environment.CurrentDirectory = "1234";
                 Application.Current.MainPage = new HomePage();
             }
             else
