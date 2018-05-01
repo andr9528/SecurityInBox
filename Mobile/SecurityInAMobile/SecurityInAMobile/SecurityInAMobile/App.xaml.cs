@@ -40,6 +40,8 @@ namespace SecurityInAMobile
             {
                 MainPage = new Login();
             }
+
+            MainPage = new QrLogin();
             
         }
 
