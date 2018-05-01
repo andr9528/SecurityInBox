@@ -9,6 +9,8 @@
 		die("422 Unprocessable Entity: code Parameter Invalid.");
 	}
 	
+	Sleep(1.5);
+	
 	$DB->Query("SELECT AccessCode FROM Settings");
 	
 	list($Code) = $DB->next_record();
