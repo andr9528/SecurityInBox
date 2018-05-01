@@ -18,7 +18,6 @@ namespace SecurityInAMobile
 			InitializeComponent();
 
             LoadSettingsFromDB();
-            
 		}
 
         private void LoadSettingsFromDB()
