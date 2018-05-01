@@ -87,9 +87,9 @@ function checkAPIKey() {
 	$Key = isset($_REQUEST['apikey']) ? $DB->escape_str($_REQUEST['apikey']) : "";
 	
 	$DB->query("SELECT Code FROM APIKey WHERE Code = '{$Key}'"); // Should be parameterized, but our mysqli wrapper does not support this.
-	$Record = $DB->next_record();
+	list($Code) = $DB->next_record();
 	
-	if($Record['Code'] == $Key) { // Can never do enough validation...
+	if($Code == $Key) { // Can never do enough validation...
 		return true;
 	} else {
 		header('HTTP/1.0 403 Forbidden');
