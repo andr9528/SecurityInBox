@@ -10,6 +10,11 @@ Returns all devices in JSON Format
 mac > MAC Address of Device
 status > New Status Indicator (numeric)
 
+/api/checkLogin.php
+1 Parameter (GET/POST) *
+code > Input from login box
+Returns TRUE if "code" is the expected and FALSE if not.
+
 Responses:
 422 > Invalid Parameters
 200 > OK
