@@ -1,8 +1,9 @@
 <?php
 
 require_once("classes/mysql.php");
+require_once("config.php");
 
-$DB = new DB_MYSQL("SIB", "SIB_User", "wiv84xNx0NmjGaSO", "localhost", "3306", "");
+$DB = new DB_MYSQL($MySQL['Database'], $MySQL['Username'], $MySQL['Password'], $MySQL['Server'], $MySQL['Port'], $MySQL['Socket']);
 $DB->connect();
 
 function display_array($Array, $Escape = array()) {
