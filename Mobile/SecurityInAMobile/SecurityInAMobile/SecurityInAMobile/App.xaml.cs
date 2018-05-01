@@ -13,7 +13,7 @@ namespace SecurityInAMobile
 		{
 			InitializeComponent();
 
-			MainPage = new SecurityInAMobile.MainPage();
+			MainPage = new SecurityInAMobile.HistoryPage();
 		}
 
 		protected override void OnStart ()

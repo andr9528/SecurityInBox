@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SecurityInAMobile.HistoryPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Column="0" Grid.Row="0" Text="New:" TextColor="Gray"/>
+                <Grid Grid.Column="0" Grid.Row="1">
+                    <ListView x:Name="NewNotificationListView">
+                        
+                    </ListView>
+                </Grid>
+                <Label Grid.Column="0" Grid.Row="2" HorizontalTextAlignment="Center" TextColor="Gray" Text="------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"/>
+                <Label Grid.Column="0" Grid.Row="3" Text="Older:" TextColor="Gray"/>
+                <Grid Grid.Column="0" Grid.Row="4">
+                    <ListView x:Name="OldNotificationListView">
+                        
+                    </ListView>
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+    
