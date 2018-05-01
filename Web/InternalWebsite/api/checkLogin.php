@@ -1,7 +1,13 @@
 <?php
 	require("../core.php");
+	checkAPIKey();
 	
 	$AccessCode = $_REQUEST['code'];
+	
+	if(empty($AccessCode)) {
+		header("HTTP/1.1 422 Unprocessable Entity");
+		die("422 Unprocessable Entity: mac Parameter Invalid.");
+	}
 	
 	$DB->Query("SELECT AccessCode FROM Settings");
 	
