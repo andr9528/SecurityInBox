@@ -1,7 +1,8 @@
 
+
 function getDevices()
 {
-    var devices = httpGet("http://securityinabox.tk/internal/api/getDevices.php");
+    var devices = httpGet("/internal/api/getDevices.php");
     console.log(devices);
     var devicesData = "";
     var deviceIndex;
@@ -49,4 +50,34 @@ function httpGet(theUrl)
     return JSON.parse(xmlHttp.responseText);
 }
 
+function checkNewDevice()
+{
+    var devices = httpGet("/internal/api/getDevices.php");
+    console.log(devices);
+    var devicesData = "";
+    var deviceIndex;
+    
+    for(deviceIndex in devices)
+        {
+            var dataIndex;
+            var device = devices[deviceIndex];
+            var deviceData = "";
+            
+            if(device["Server"] == null)
+                {
+                    
+                }
+    
+            
+            
+            
+    setTimeout(checkNewDevice, 1000)
+    
+    
+}
 
+checkNewDevice();
+
+$(document).ready(function() {
+    $(".popup").hide();
+});
