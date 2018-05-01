@@ -1,2 +1,2 @@
 scapy
-admin
+MySQLdb
