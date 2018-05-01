@@ -6,7 +6,7 @@
 	
 	if(empty($AccessCode)) {
 		header("HTTP/1.1 422 Unprocessable Entity");
-		die("422 Unprocessable Entity: mac Parameter Invalid.");
+		die("422 Unprocessable Entity: code Parameter Invalid.");
 	}
 	
 	$DB->Query("SELECT AccessCode FROM Settings");
