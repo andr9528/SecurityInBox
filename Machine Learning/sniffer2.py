@@ -56,7 +56,7 @@ while True:
     #get data from the packet
     data = packet[h_size:]
 
-    if(str(dest_port) != SSHPort and str(s_addr) != OwnIP):
+    if(str(dest_port) != SSHPort and str(s_addr) != OwnIP) or True:
      print 'Version : ' + str(version) + ' IP Header Length : ' + str(ihl) + ' TTL : ' + str(ttl) + ' Protocol : ' + str(protocol) + ' Source Address : ' + str(s_addr) + ' Destination Address : ' + str(d_addr)
      print 'Source Port : ' + str(source_port) + ' Dest Port : ' + str(dest_port) + ' Sequence Number : ' + str(sequence) + ' Acknowledgement : ' + str(acknowledgement) + ' TCP header length : ' + str(tcph_length)
      print 'Data : ' + data
