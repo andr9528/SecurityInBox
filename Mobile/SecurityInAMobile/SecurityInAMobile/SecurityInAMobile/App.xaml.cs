@@ -14,7 +14,7 @@ namespace SecurityInAMobile
 		{
 			InitializeComponent();
 
-			MainPage = new HomePage();
+			MainPage = new Burger();
 
             //Thread.Sleep(10000);
 
