@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Security in a Box</title>
+		<meta charset="UTF-8">
+        <link rel="stylesheet" href="assets/style/style.css">
+
+	</head>
+    
+    <body>
+        <div class="bar">HELP</div>
+        <div class="container" border-bottom-width:1px>
+			<h3>How to...</h3>
+			<hr/>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			<button class="accordion">Section 1</button>
+			<div class="panel">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+			<script>
+			var acc = document.getElementsByClassName("accordion");
+			var i;
+
+			for (i = 0; i < acc.length; i++) {
+				acc[i].onclick = function() {
+					this.classList.toggle("active");
+					var panel = this.nextElementSibling;
+					if (panel.style.maxHeight){
+						panel.style.maxHeight = null;
+					} else {
+						panel.style.maxHeight = panel.scrollHeight + "px";
+					} 
+				}
+			}
+			</script>
+		</div>
+
+    </body>
+</html>
