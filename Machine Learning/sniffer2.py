@@ -1,13 +1,10 @@
 import socket, sys
 from struct import *
 
-OwnIP = "10.140.78.241"
-SSHPort = "22"
-
 #create an INET, STREAMing socket
 try:
     s = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_IP)
-    s.bind(("10.140.78.241", 0))
+    s.bind(("10.140.68.31", 0))
     s.setsockopt(socket.IPPROTO_IP, socket.IP_HDRINCL, 1)
     s.ioctl(socket.SIO_RCVALL, socket.RCVALL_ON)
 except socket.error , msg:
@@ -41,24 +38,25 @@ while True:
     tcp_header = packet[iph_length:iph_length+20]
 
     #now unpack them :)
-    tcph = unpack('!HHLLBBHHH' , tcp_header)
+    if len(tcp_header) >= 20:
+     tcph = unpack('!HHLLBBHHH' , tcp_header)
 
-    source_port = tcph[0]
-    dest_port = tcph[1]
-    sequence = tcph[2]
-    acknowledgement = tcph[3]
-    doff_reserved = tcph[4]
-    tcph_length = doff_reserved >> 4
+     source_port = tcph[0]
+     dest_port = tcph[1]
+     sequence = tcph[2]
+     acknowledgement = tcph[3]
+     doff_reserved = tcph[4]
+     tcph_length = doff_reserved >> 4
 
-    h_size = iph_length + tcph_length * 4
-    data_size = len(packet) - h_size
+     h_size = iph_length + tcph_length * 4
+     data_size = len(packet) - h_size
 
-    #get data from the packet
-    data = packet[h_size:]
+     #get data from the packet
+     data = packet[h_size:]
 
-    if(str(dest_port) != SSHPort and str(s_addr) != OwnIP) or True:
-     print 'Version : ' + str(version) + ' IP Header Length : ' + str(ihl) + ' TTL : ' + str(ttl) + ' Protocol : ' + str(protocol) + ' Source Address : ' + str(s_addr) + ' Destination Address : ' + str(d_addr)
-     print 'Source Port : ' + str(source_port) + ' Dest Port : ' + str(dest_port) + ' Sequence Number : ' + str(sequence) + ' Acknowledgement : ' + str(acknowledgement) + ' TCP header length : ' + str(tcph_length)
-     print 'Data : ' + data
-     print
+     print 'Version: ' + str(version) + '; IP Header Length: ' + str(ihl) + '; TTL: ' + str(ttl) + '; Protocol: ' + str(protocol) + '; Source Address: ' + str(s_addr) + '; Destination Address: ' + str(d_addr)
+     print 'Source Port: ' + str(source_port) + '; Dest Port: ' + str(dest_port) + '; Sequence Number: ' + str(sequence) + '; Acknowledgement: ' + str(acknowledgement) + '; TCP header length: ' + str(tcph_length)
+     print 'Data:'
+     print data
+    print 
 
