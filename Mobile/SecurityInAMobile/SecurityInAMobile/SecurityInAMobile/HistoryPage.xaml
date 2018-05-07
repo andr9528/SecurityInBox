@@ -13,7 +13,7 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="15"/>
                     <RowDefinition Height="15"/>
-                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
                 </Grid.RowDefinitions>
                 <Label Grid.Column="0" Grid.Row="0" Text="New:" TextColor="Gray"/>
                 <Grid Grid.Column="0" Grid.Row="1">

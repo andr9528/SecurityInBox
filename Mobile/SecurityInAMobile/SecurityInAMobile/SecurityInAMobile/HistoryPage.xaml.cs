@@ -24,17 +24,19 @@ namespace SecurityInAMobile
 
         public void PopulateNewList()
         {
-            NewNotificationList.Add("hello");
-            NewNotificationList.Add("cookie");
-            NewNotificationList.Add("completely healthy and alive pony");
+            
 
             int i = 0;
             while (i < 30)
             {
                 OldNotificationList.Add("Pancake");
+
+                NewNotificationList.Add("Pancake");
                 i++;
             }
-
+NewNotificationList.Add("hello");
+            NewNotificationList.Add("cookie");
+            NewNotificationList.Add("completely healthy and alive pony");
             OldNotificationList.Add("Bacon");
         }
 
