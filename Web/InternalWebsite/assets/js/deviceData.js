@@ -63,12 +63,13 @@ function checkNewDevice()
             var device = devices[deviceIndex];
             var deviceData = "";
             
-            if(device["Server"] == null)
+            if(device["Status"] == "")
                 {
                     
+                     $(".popup").show();
                 }
     
-            
+        }
             
             
     setTimeout(checkNewDevice, 1000)
@@ -78,6 +79,4 @@ function checkNewDevice()
 
 checkNewDevice();
 
-$(document).ready(function() {
-    $(".popup").hide();
-});
+

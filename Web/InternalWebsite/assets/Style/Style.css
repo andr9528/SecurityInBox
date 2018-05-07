@@ -9,7 +9,7 @@ body
     font-family: "Verdana";
 }
 
-div.container{
+.containerRox{
     margin: 0px auto;
     min-height: 80vh;
     text-align: center;
@@ -38,13 +38,11 @@ div.container{
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-div.bar{
-    padding-top: 10px;
+.barRox{
     background-color: #0F5896;
     min-height: 5vh;
     text-align: center;
     color: white;
-    text-align: center;
     font-size: 3vmin;
     width:75%;
     margin: 0 auto;
@@ -80,6 +78,7 @@ td{
     width: 60%;
     margin-top: 50vmin;
     margin-bottom: 5vmin;
+    display: none;
     
 }
 .popup .header{
@@ -90,3 +89,9 @@ td{
     color: white;
     font-family: "Verdana";
 }
+
+.remove-all-margin-padding{
+margin:0 ! important;
+padding:0 ! important;
+}
+
