@@ -51,6 +51,17 @@ div.bar{
     
 }
 
+button.accordion{
+	padding-top: 10px;
+    min-height: 5vh;
+    text-align: center;
+    color: #0F5896;
+    text-align: center;
+    font-size: 5vh;
+    width:95%;
+    margin: 0 auto;
+}
+
 table {
     font-family: "VerdanaS", sans-serif;
     border-collapse: collapse;
@@ -76,13 +87,12 @@ hr {
     height: 1px;
     border: 0;
     border-top: 1px solid #dddddd;
-    margin: 1em 0;
+    margin: 0;
     padding: 0;
 }
 
 .accordion {
-    background-color: #eee;
-    color: #444;
+    background-color: #F9F9F9;
     cursor: pointer;
     padding: 18px;
     width: 100%;
@@ -98,22 +108,22 @@ hr {
 
 .panel {
     padding: 0 18px;
-    background-color: white;
+    background-color: #F9F9F9;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
 
 .accordion:after {
-    content: "\02795"; /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
+    content: "\0FF0B"; /* Unicode character for "plus" sign (+) */
+    font-size: 5vh;
     color: #777;
     float: right;
     margin-left: 5px;
 }
 
 .active:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
+    content: "\0FF0D"; /* Unicode character for "minus" sign (-) */
 }
 
 .popup{
