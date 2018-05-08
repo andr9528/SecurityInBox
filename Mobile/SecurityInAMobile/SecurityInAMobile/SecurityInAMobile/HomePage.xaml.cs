@@ -31,7 +31,6 @@ namespace SecurityInAMobile
             catch (Exception ex)
             {
                 DisplayAlert("Exception", ex.Message, "Ok");
-
                 throw;
             }
 
