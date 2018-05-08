@@ -38,7 +38,7 @@ namespace SecurityInAMobile
                 throw;
             }
 
-            Application.Current.MainPage = new SettingsPage(); // Change SettingsPage to Login when Burger has been implemented
+            Application.Current.MainPage = new Login();
         }
     }
 }

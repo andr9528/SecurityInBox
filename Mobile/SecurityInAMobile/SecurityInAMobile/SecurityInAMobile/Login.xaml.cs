@@ -30,7 +30,14 @@ namespace SecurityInAMobile
                 writer.WriteEndDocument();
                 writer.Close();
 
-                Application.Current.MainPage = new HomePage();
+                MenuPage menuPage = new MenuPage();
+                App.NavigationPage = new NavigationPage(new HomePage());
+                RootPage rootPage = new RootPage
+                {
+                    Master = menuPage,
+                    Detail = App.NavigationPage
+                };
+                Application.Current.MainPage = rootPage;
             }
             else
             {
