@@ -7,6 +7,7 @@ using Xamarin.Forms;
 
 namespace SecurityInAMobile
 {
+    // Legacy Class, kept for old times sake
 	public partial class MainPage : ContentPage
 	{
 		public MainPage()
