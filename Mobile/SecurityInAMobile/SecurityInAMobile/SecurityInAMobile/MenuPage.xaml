@@ -6,6 +6,8 @@
         <Grid>
             <Button x:Name="Settings" Text="Settings" Grid.Column="0" Grid.Row="0"
                     HorizontalOptions="Start" VerticalOptions="Center" Clicked="Settings_Clicked"/>
+            <Button x:Name="Help" Text="Settings" Grid.Column="0" Grid.Row="0"
+                    HorizontalOptions="Start" VerticalOptions="Center" Clicked="Help_Clicked"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

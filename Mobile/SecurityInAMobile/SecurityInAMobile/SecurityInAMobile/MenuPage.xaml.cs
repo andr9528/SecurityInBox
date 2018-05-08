@@ -22,5 +22,10 @@ namespace SecurityInAMobile
         {
             App.NavigationPage.Navigation.PushAsync(new SettingsPage());
         }
+
+        private void Help_Clicked(object sender, EventArgs e)
+        {
+            App.NavigationPage.Navigation.PushAsync(new HelpPage());
+        }
     }
 }

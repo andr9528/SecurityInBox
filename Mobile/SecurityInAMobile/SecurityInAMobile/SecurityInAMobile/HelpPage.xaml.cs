@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Help
+namespace SecurityInAMobile
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Help : ContentPage
+	public partial class HelpPage : ContentPage
 	{
-		public Help ()
+		public HelpPage ()
 		{
 			InitializeComponent ();
 		}
