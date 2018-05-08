@@ -14,10 +14,7 @@ namespace SecurityInAMobile
 	{
 		public HomePage ()
 		{
-			InitializeComponent ();
-
-            
-            
+			InitializeComponent ();  
 		}
         private void DisconectButton_Clicked(object sender, EventArgs e)
         {
@@ -33,8 +30,7 @@ namespace SecurityInAMobile
             }
             catch (Exception ex)
             {
-                DisplayAlert("Excemption", ex.Message, "Ok");
-
+                DisplayAlert("Exception", ex.Message, "Ok");
                 throw;
             }
 

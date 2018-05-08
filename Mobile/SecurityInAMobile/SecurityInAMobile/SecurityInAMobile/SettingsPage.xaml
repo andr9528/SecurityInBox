@@ -9,7 +9,8 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Grid Grid.Row="0" x:Name="DeviceGrid"> <!--This is for options Regarding the Devices-->
+                <!--#region Devices-->
+                <Grid Grid.Row="0" x:Name="DeviceGrid">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="30" />
                         <RowDefinition Height="80" />
@@ -31,8 +32,10 @@
                             HorizontalOptions="CenterAndExpand" BackgroundColor="#0F5896" TextColor="White" 
                             Text="Show Only Disapproved Devices"/>
                 </Grid>
-
-                <Grid Grid.Row="1" x:Name="NotificationGrid"> <!--This is for option Regarding the Notifications-->
+                <!--#endregion-->
+                
+                <!--#region Notifications-->
+                <Grid Grid.Row="1" x:Name="NotificationGrid">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="30" />
                         <RowDefinition Height="80" />
@@ -51,12 +54,9 @@
                            TextColor="Black" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
                     <Switch Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" x:Name="SendNotifySwitch"/>
                     <Switch Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" x:Name="DevicesConnectSwitch"/>
-
                 </Grid>
-                
+                <!--#endregion-->
 
-                
-                
             </Grid>
         </ScrollView>
     </ContentPage.Content>
