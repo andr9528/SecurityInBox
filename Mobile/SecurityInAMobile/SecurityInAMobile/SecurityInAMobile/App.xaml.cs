@@ -12,7 +12,8 @@ namespace SecurityInAMobile
 {
 	public partial class App : Application
 	{
-		public App ()
+        public static NavigationPage NavigationPage { get; set; }
+        public App ()
 		{
 			InitializeComponent();
 
@@ -29,7 +30,14 @@ namespace SecurityInAMobile
 
                 if (doc.GetElementsByTagName("Login")[0].InnerXml == "1234")
                 {
-                    MainPage = new HomePage();
+                    MenuPage menuPage = new MenuPage();
+                    NavigationPage = new NavigationPage(new HomePage());
+                    RootPage rootPage = new RootPage
+                    {
+                        Master = menuPage,
+                        Detail = NavigationPage
+                    };
+                    MainPage = rootPage;
                 }
                 else
                 {
