@@ -16,37 +16,44 @@ namespace SecurityInAMobile
 		{
 			InitializeComponent ();
             PopulateNewList();
-            PutListsIntoListviews();
-		}
-
-        public List<string> NewNotificationList = new List<string>();
-        public List<string> OldNotificationList = new List<string>();
-
-        public void PopulateNewList()
-        {
-            
-
-            int i = 0;
-            while (i < 30)
-            {
-                OldNotificationList.Add("Pancake");
-
-                NewNotificationList.Add("Pancake");
-                i++;
-            }
-NewNotificationList.Add("hello");
-            NewNotificationList.Add("cookie");
-            NewNotificationList.Add("completely healthy and alive pony");
-            OldNotificationList.Add("Bacon");
+            //PutListsIntoListviews();
         }
 
-        public void PutListsIntoListviews()
-        {
-            ListView NewNotificationListView = this.FindByName<ListView>("NewNotificationListView");
-            NewNotificationListView.ItemsSource = NewNotificationList;
-            ListView OldNotificationListView = this.FindByName<ListView>("OldNotificationListView");
-            OldNotificationListView.ItemsSource = OldNotificationList;
+        public List<string> newNotificationList = new List<string>();
+        public List<string> oldNotificationList = new List<string>();
 
+        public void PopulateNewList()
+                {
+
+
+                    int i = 0;
+                    while (i < 30)
+                    {
+                        oldNotificationList.Add("Pancake");
+
+                        newNotificationList.Add("Pancake");
+                        i++;
+                    }
+            newNotificationList.Add("hello");
+            newNotificationList.Add("cookie");
+            newNotificationList.Add("completely healthy and alive pony");
+            oldNotificationList.Add("Bacon");
+        }
+
+        //        public void PutListsIntoListviews()
+        //        {
+        //            ListView NewNotificationListView = this.FindByName<ListView>("NewNotificationListView");
+        //            NewNotificationListView.ItemsSource = newNotificationList;
+        //            ListView OldNotificationListView = this.FindByName<ListView>("OldNotificationListView");
+        //            OldNotificationListView.ItemsSource = oldNotificationList;
+
+        //        }
+
+        public async Task<List<string>> GetItemsAsync(int pageIndex, int pageSize)
+        {
+            await Task.Delay(2000);
+
+            return newNotificationList.Skip(pageIndex * pageSize).Take(pageSize).ToList();
         }
     }
 }
