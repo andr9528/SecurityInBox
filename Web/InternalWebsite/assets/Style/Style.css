@@ -1,11 +1,12 @@
 html{
-    min-height: 100%;
+    
     background-color: #EEEEEE;
     background-size: cover;
 }
 
 body
 {
+    min-height: 100%;
     font-family: "Verdana";
 }
 
@@ -17,11 +18,11 @@ body
     box-shadow: 0px 3px 8px 0px rgba(50, 50, 50, 0.37);
     padding-top: 20px;
     background-color: #F9F9F9;
-    font-size: 4vmin;
+    font-size: 1vmin;
     color: #0F5896;
 }
 
-.button{
+.buttonIndex{
     background-color: #0F5896;
     border: none;
     color: white;
@@ -34,7 +35,7 @@ body
     transition-duration: 0.4s;
 }
 
-.button2:hover {
+.buttonIndex2:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
@@ -125,14 +126,12 @@ hr {
 }
 
 .popup{
-    position: relative;
+    
     display: inline-block;
     box-shadow: 0px 3px 8px 0px rgba(15, 88, 150, 0.60);
-    min-height: 20vh;
+    min-height: 15vh;
     margin: 0px auto;
-    width: 60%;
-    margin-top: 50vmin;
-    margin-bottom: 5vmin;
+    margin-top: 5vmin;
     display: none;
     
 }
@@ -150,3 +149,8 @@ margin:0 ! important;
 padding:0 ! important;
 }
 
+.changedContainer{
+    width: 50% ! importtant;
+    padding-right: none ! important;
+    padding-left: none ! important;
+}
