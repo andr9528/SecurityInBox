@@ -1,11 +1,12 @@
 html{
     
-    background-color: #EEEEEE;
+    
     background-size: cover;
 }
 
 body
 {
+    background-color: #EEEEEE ! important;
     min-height: 100%;
     font-family: "Verdana";
 }
@@ -16,9 +17,8 @@ body
     text-align: center;
     width: 75%;
     box-shadow: 0px 3px 8px 0px rgba(50, 50, 50, 0.37);
-    padding-top: 20px;
     background-color: #F9F9F9;
-    font-size: 1vmin;
+    font-size: 3vmin;
     color: #0F5896;
 }
 
@@ -132,7 +132,7 @@ hr {
     min-height: 15vh;
     margin: 0px auto;
     margin-top: 5vmin;
-    display: none;
+    
     
 }
 .popup .header{
@@ -150,7 +150,7 @@ padding:0 ! important;
 }
 
 .changedContainer{
-    width: 50% ! importtant;
-    padding-right: none ! important;
-    padding-left: none ! important;
+    width: 50% ! important;
+    padding-right: 0 ! important;
+    padding-left: 0 ! important;
 }
