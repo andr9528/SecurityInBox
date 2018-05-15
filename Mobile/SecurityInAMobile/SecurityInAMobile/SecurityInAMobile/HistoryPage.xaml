@@ -3,7 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SecurityInAMobile.HistoryPage">
     <ContentPage.Content>
+<<<<<<< HEAD
         <ScrollView>
+            <StackLayout Padding="0,20,0,0">
+                <Label Text="Notifications" FontAttributes="Bold" HorizontalOptions="Center" />
+                <ListView x:Name="NotificationListView" HasUnevenRows="true">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Padding="10,10,10,10" Orientation="Horizontal" BackgroundColor="{Binding Color}">
+                                    <Label Text="{Binding DataString}" HorizontalTextAlignment="Center" TextColor="White" FontSize="16"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+=======
+        <!--<ScrollView>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -13,7 +31,7 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="15"/>
                     <RowDefinition Height="15"/>
-                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
                 </Grid.RowDefinitions>
                 <Label Grid.Column="0" Grid.Row="0" Text="New:" TextColor="Gray"/>
                 <Grid Grid.Column="0" Grid.Row="1">
@@ -29,7 +47,7 @@
                     </ListView>
                 </Grid>
             </Grid>
-        </ScrollView>
+        </ScrollView>-->
+>>>>>>> d3ce8b765bc53d5a5ad926277860155f741966c7
     </ContentPage.Content>
 </ContentPage>
-    
