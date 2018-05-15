@@ -3,8 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SecurityInAMobile.HistoryPage">
     <ContentPage.Content>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <ScrollView>
             <StackLayout Padding="0,20,0,0">
                 <Label Text="Notifications" FontAttributes="Bold" HorizontalOptions="Center" />
@@ -21,39 +19,5 @@
                 </ListView>
             </StackLayout>
         </ScrollView>
-=======
-=======
->>>>>>> d3ce8b765bc53d5a5ad926277860155f741966c7
-        <!--<ScrollView>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="15"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="15"/>
-                    <RowDefinition Height="15"/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                <Label Grid.Column="0" Grid.Row="0" Text="New:" TextColor="Gray"/>
-                <Grid Grid.Column="0" Grid.Row="1">
-                    <ListView x:Name="NewNotificationListView">
-                        
-                    </ListView>
-                </Grid>
-                <Label Grid.Column="0" Grid.Row="2" HorizontalTextAlignment="Center" TextColor="Gray" Text="------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"/>
-                <Label Grid.Column="0" Grid.Row="3" Text="Older:" TextColor="Gray"/>
-                <Grid Grid.Column="0" Grid.Row="4">
-                    <ListView x:Name="OldNotificationListView">
-                        
-                    </ListView>
-                </Grid>
-            </Grid>
-        </ScrollView>-->
-<<<<<<< HEAD
->>>>>>> d3ce8b765bc53d5a5ad926277860155f741966c7
-=======
->>>>>>> d3ce8b765bc53d5a5ad926277860155f741966c7
     </ContentPage.Content>
 </ContentPage>
