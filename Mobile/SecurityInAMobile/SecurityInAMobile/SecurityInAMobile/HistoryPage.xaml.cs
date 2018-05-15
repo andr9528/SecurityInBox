@@ -15,6 +15,7 @@ namespace SecurityInAMobile
 		public HistoryPage()
 		{
 <<<<<<< HEAD
+<<<<<<< HEAD
 			InitializeComponent();
             NotificationListView.ItemsSource = notifications;
             PopulateList();
@@ -72,6 +73,34 @@ namespace SecurityInAMobile
             oldNotificationList.Add("Bacon");
         }
 
+=======
+			InitializeComponent ();
+            PopulateNewList();
+            //PutListsIntoListviews();
+        }
+
+        public List<string> newNotificationList = new List<string>();
+        public List<string> oldNotificationList = new List<string>();
+
+        public void PopulateNewList()
+                {
+
+
+                    int i = 0;
+                    while (i < 30)
+                    {
+                        oldNotificationList.Add("Pancake");
+
+                        newNotificationList.Add("Pancake");
+                        i++;
+                    }
+            newNotificationList.Add("hello");
+            newNotificationList.Add("cookie");
+            newNotificationList.Add("completely healthy and alive pony");
+            oldNotificationList.Add("Bacon");
+        }
+
+>>>>>>> d3ce8b765bc53d5a5ad926277860155f741966c7
         //        public void PutListsIntoListviews()
         //        {
         //            ListView NewNotificationListView = this.FindByName<ListView>("NewNotificationListView");
@@ -86,6 +115,9 @@ namespace SecurityInAMobile
             await Task.Delay(2000);
 
             return newNotificationList.Skip(pageIndex * pageSize).Take(pageSize).ToList();
+<<<<<<< HEAD
+>>>>>>> d3ce8b765bc53d5a5ad926277860155f741966c7
+=======
 >>>>>>> d3ce8b765bc53d5a5ad926277860155f741966c7
         }
     }
