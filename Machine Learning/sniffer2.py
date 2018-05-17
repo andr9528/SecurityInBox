@@ -69,4 +69,3 @@ while True:
 	 print('Source Port: ' + str(source_port) + '; Dest Port: ' + str(dest_port) + '; Sequence Number: ' + str(sequence) + '; Acknowledgement: ' + str(acknowledgement) + '; TCP header length: ' + str(tcph_length) + '; ', end='')
 	 print('Data: ', end='')
 	 print(base64.b64encode(data))
-
