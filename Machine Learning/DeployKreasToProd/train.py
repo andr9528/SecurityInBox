@@ -19,11 +19,11 @@ from keras.layers import Conv2D, MaxPooling2D
 from keras import backend as K
 
 #mini batch gradient descent ftw
-batch_size = 128
+batch_size = 256
 #10 difference characters
 num_classes = 10
 #very short training time
-epochs = 12
+epochs = 24
 
 # input image dimensions
 #28x28 pixel images. 

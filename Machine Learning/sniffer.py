@@ -8,9 +8,9 @@ SSHPort = "22"
 try:
     s = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_TCP)
 except socket.error , msg:
-    print 'Socket could not be created. Error Code : ' + str(msg[0]) + ' Message ' + msg[1]
-    sys.exit()
- 
+	print('Socket could not be created.\n\rError Code : ' + str(msg[0]) + '\n\rMessage: ' + msg[1])
+	sys.exit()
+
 # receive a packet
 while True:
     packet = s.recvfrom(65565)

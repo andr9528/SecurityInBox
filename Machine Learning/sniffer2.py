@@ -1,62 +1,72 @@
+from __future__ import print_function
 import socket, sys
+from sys import platform
 from struct import *
+import base64
+import os
 
-#create an INET, STREAMing socket
-try:
-    s = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_IP)
-    s.bind(("10.140.68.31", 0))
-    s.setsockopt(socket.IPPROTO_IP, socket.IP_HDRINCL, 1)
-    s.ioctl(socket.SIO_RCVALL, socket.RCVALL_ON)
-except socket.error , msg:
-    print 'Socket could not be created.\n\rError Code : ' + str(msg[0]) + '\n\rMessage: ' + msg[1]
-    sys.exit()
+if platform == "linux" or platform == "linux2":
+	try:
+		s = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_TCP)
+	except socket.error , msg:
+		print('Socket could not be created.\n\rError Code : ' + str(msg[0]) + '\n\rMessage: ' + msg[1])
+		sys.exit()
+elif platform == "win32":
+	#create an INET, STREAMing socket
+	try:
+		s = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_IP)
+		s.bind(("10.140.72.251", 0))
+		s.setsockopt(socket.IPPROTO_IP, socket.IP_HDRINCL, 1)
+		s.ioctl(socket.SIO_RCVALL, socket.RCVALL_ON)
+	except socket.error , msg:
+		print('Socket could not be created.\n\rError Code : ' + str(msg[0]) + '\n\rMessage: ' + msg[1])
+		sys.exit()
 
 # receive a packet
 while True:
-    packet = s.recvfrom(65565)
+	packet = s.recvfrom(65565)
 
-    #packet string from tuple
-    packet = packet[0]
+	#packet string from tuple
+	packet = packet[0]
 
-    #take first 20 characters for the ip header
-    ip_header = packet[0:20]
+	#take first 20 characters for the ip header
+	ip_header = packet[0:20]
 
-    #now unpack them :)
-    iph = unpack('!BBHHHBBH4s4s' , ip_header)
+	#now unpack them :)
+	iph = unpack('!BBHHHBBH4s4s' , ip_header)
 
-    version_ihl = iph[0]
-    version = version_ihl >> 4
-    ihl = version_ihl & 0xF
+	version_ihl = iph[0]
+	version = version_ihl >> 4
+	ihl = version_ihl & 0xF
 
-    iph_length = ihl * 4
+	iph_length = ihl * 4
 
-    ttl = iph[5]
-    protocol = iph[6]
-    s_addr = socket.inet_ntoa(iph[8]);
-    d_addr = socket.inet_ntoa(iph[9]);
+	ttl = iph[5]
+	protocol = iph[6]
+	s_addr = socket.inet_ntoa(iph[8]);
+	d_addr = socket.inet_ntoa(iph[9]);
 
-    tcp_header = packet[iph_length:iph_length+20]
+	tcp_header = packet[iph_length:iph_length+20]
 
-    #now unpack them :)
-    if len(tcp_header) >= 20:
-     tcph = unpack('!HHLLBBHHH' , tcp_header)
+	#now unpack them :)
+	if len(tcp_header) >= 20:
+	 tcph = unpack('!HHLLBBHHH' , tcp_header)
 
-     source_port = tcph[0]
-     dest_port = tcph[1]
-     sequence = tcph[2]
-     acknowledgement = tcph[3]
-     doff_reserved = tcph[4]
-     tcph_length = doff_reserved >> 4
+	 source_port = tcph[0]
+	 dest_port = tcph[1]
+	 sequence = tcph[2]
+	 acknowledgement = tcph[3]
+	 doff_reserved = tcph[4]
+	 tcph_length = doff_reserved >> 4
 
-     h_size = iph_length + tcph_length * 4
-     data_size = len(packet) - h_size
+	 h_size = iph_length + tcph_length * 4
+	 data_size = len(packet) - h_size
 
-     #get data from the packet
-     data = packet[h_size:]
+	 #get data from the packet
+	 data = packet[h_size:]
 
-     print 'Version: ' + str(version) + '; IP Header Length: ' + str(ihl) + '; TTL: ' + str(ttl) + '; Protocol: ' + str(protocol) + '; Source Address: ' + str(s_addr) + '; Destination Address: ' + str(d_addr)
-     print 'Source Port: ' + str(source_port) + '; Dest Port: ' + str(dest_port) + '; Sequence Number: ' + str(sequence) + '; Acknowledgement: ' + str(acknowledgement) + '; TCP header length: ' + str(tcph_length)
-     print 'Data:'
-     print data
-     print 
+	 print('Version: ' + str(version) + '; IP Header Length: ' + str(ihl) + '; TTL: ' + str(ttl) + '; Protocol: ' + str(protocol) + '; Source Address: ' + str(s_addr) + '; Destination Address: ' + str(d_addr) + '; ', end='')
+	 print('Source Port: ' + str(source_port) + '; Dest Port: ' + str(dest_port) + '; Sequence Number: ' + str(sequence) + '; Acknowledgement: ' + str(acknowledgement) + '; TCP header length: ' + str(tcph_length) + '; ', end='')
+	 print('Data: ', end='')
+	 print(base64.b64encode(data))
 
