@@ -1,0 +1,7 @@
+Flask == 0.11.1
+gevent
+gunicorn
+keras
+numpy
+h5py
+pillow
