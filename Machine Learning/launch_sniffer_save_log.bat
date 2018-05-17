@@ -15,8 +15,18 @@ cd /d "%~dp0"
 
     pause >nul 
 	
-:process
-set /p name=Name to save log as (e.g. your own name):
-python sniffer2.py > logfile_%name%_%date%_%random%
+:process 
+set /p name=Name to save log as (e.g. your own name): 
 
+echo.
+echo Notice: Log files ARE NOT put in github.
+echo Please upload logfiles to ftp
+echo Exit program using CTRL + C
+echo.
+echo Executing Python Script!
+python sniffer2.py > logfile_%name%_%date%_%random%
+echo Python script terminated!
+
+echo.
+echo Press any key to exit terminal
 pause >nul
