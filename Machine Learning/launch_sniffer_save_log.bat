@@ -1,4 +1,4 @@
-@echo off
+rem @echo off
 cd /d "%~dp0"
 
     echo Administrative permissions required. Detecting permissions...
@@ -16,6 +16,7 @@ cd /d "%~dp0"
     pause >nul 
 	
 :process 
+
 set /p name=Name to save log as (e.g. your own name): 
 
 echo.
@@ -24,7 +25,7 @@ echo Please upload logfiles to ftp
 echo Exit program using CTRL + C
 echo.
 echo Executing Python Script!
-python sniffer2.py > logfile_%name%_%date%_%random%
+python sniffer2.py > logfile_%name%_%random%%random%
 echo Python script terminated!
 
 echo.
