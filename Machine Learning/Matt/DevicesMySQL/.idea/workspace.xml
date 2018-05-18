@@ -16,7 +16,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DeviceDeclarative.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DeviceDeclarative.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DeviceDeclarative.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
@@ -28,9 +28,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InsertDevice.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="InsertDevice.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/InsertDevice.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="13" column="16" lean-forward="true" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="ReadAllDevices.py" pinned="false" current-in-tab="false">
@@ -208,7 +212,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -288,19 +291,6 @@
     <entry file="file://$PROJECT_DIR$/CRUD/ReadDevice.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/DeleteDevice.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/InsertDevice.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/ReadAllDevices.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -311,6 +301,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DeleteDevice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DeviceDeclarative.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -318,6 +318,13 @@
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/InsertDevice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="13" column="16" lean-forward="true" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
         </state>
       </provider>
     </entry>
