@@ -1,3 +1,5 @@
+import sys
+sys.path.insert(0, 'Users\Matt\Documents\Github\SecurityInBox\Machine Learning\Matt\DevicesMySQL')
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from DeviceDeclarative import Device, Base
