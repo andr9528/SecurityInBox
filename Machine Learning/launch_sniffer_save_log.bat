@@ -1,4 +1,4 @@
-rem @echo off
+@echo off
 cd /d "%~dp0"
 
     echo Administrative permissions required. Detecting permissions...
