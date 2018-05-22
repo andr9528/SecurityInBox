@@ -25,7 +25,9 @@ echo Please upload logfiles to ftp
 echo Exit program using CTRL + C
 echo.
 echo Executing Python Script!
+
 python sniffer2.py > logfile_%name%_%random%%random%
+
 echo Python script terminated!
 
 echo.
