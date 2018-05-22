@@ -23,7 +23,7 @@ batch_size = 30
 
 # this returns a tensor
 print("Creating Model...")
-inputs = Input(shape=(sequence_length,), dtype='int32')
+inputs = Input(shape=(sequence_length,), dtype='int64')
 embedding = Embedding(input_dim=vocabulary_size, output_dim=embedding_dim, input_length=sequence_length)(inputs)
 reshape = Reshape((sequence_length,embedding_dim,1))(embedding)
 
