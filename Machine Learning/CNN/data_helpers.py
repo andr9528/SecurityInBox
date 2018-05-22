@@ -1,6 +1,8 @@
 import numpy as np
 import os
 import base64
+import itertools
+from collections import Counter
 
 def load_data():
         positive_examples = list()
@@ -52,8 +54,8 @@ def load_data_and_labels():
         #x_text = [[make_numbers(s) for s in t] for t in x_text]
         
         print("Generate Labels")
-        positive_labels = [[1] for _ in positive_examples]
-        negative_labels = [[0] for _ in negative_examples]
+        positive_labels = [[1,0] for _ in positive_examples]
+        negative_labels = [[0,1] for _ in negative_examples]
         y = np.concatenate([positive_labels, negative_labels], 0)
         print("Done")
         return[x_text, y]
@@ -77,13 +79,28 @@ def IPToDec(ip):
         dec3 = int(octs[3])
         return dec0+dec1+dec2+dec3
 
+def build_vocab(sentences):
+    """
+    Builds a vocabulary mapping from word to index based on the sentences.
+    Returns vocabulary mapping and inverse vocabulary mapping.
+    """
+    # Build vocabulary
+    word_counts = Counter(itertools.chain(*sentences))
+    # Mapping from index to word
+    vocabulary_inv = [x[0] for x in word_counts.most_common()]
+    vocabulary_inv = list(sorted(vocabulary_inv))
+    # Mapping from word to index
+    vocabulary = {x: i for i, x in enumerate(vocabulary_inv)}
+    return [vocabulary, vocabulary_inv]
         
 def get_data():
         x, y = load_data_and_labels()
-        data = np.array(x, dtype="float")      
+        data = np.array(x, dtype="int64")      
         labels = np.array(y)
         
-        return [data, labels]
+        vocabulary, vocabulary_inv = build_vocab(x)
+
+        return [data, labels, vocabulary]
 
 def test_writelist(x):
         for y in x:
