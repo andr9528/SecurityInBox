@@ -36,7 +36,7 @@ body
     text-align: center;
     color: white;
     font-size: 3vmin;
-    width:85%;
+    width:75%;
     margin: 0 auto;
     
 }
@@ -45,7 +45,7 @@ body
     margin: 0px auto;
     min-height: auto 20px;
     text-align: center;
-    width: 85%;
+    width: 75%;
     box-shadow: 0px 3px 8px 0px rgba(50, 50, 50, 0.37);
     background-color: #F9F9F9;
     font-size: 3vmin;
@@ -86,8 +86,8 @@ td{
 i:hover{
   text-shadow: 2px 2px 10px #b0b0b0;
     cursor: pointer;
-    transition: transform 1s;
-    transform: scale(2);
+    transition: transform .3s;
+    transform: scale(1.2);
     
 
 }
@@ -168,7 +168,7 @@ padding:0 ! important;
 
 img {
     padding-top: 20px;
-    width: 30%;
+    width: 25%;
     height: auto;
 }
 

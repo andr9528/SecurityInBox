@@ -18,7 +18,7 @@ function updateDeviceList()
     getDevices();
     
     
-    //setTimeout(updateDeviceList, 1000);
+    setTimeout(updateDeviceList, 1000);
 }
 
 $(document).ready(function(){
