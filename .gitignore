@@ -1,5 +1,1 @@
-
-Mobile/SecurityInAMobile/SecurityInAMobile/SecurityInAMobile.Android/obj/Debug/android/bin/classes/mono/android/support/v4/view/accessibility/AccessibilityManagerCompat_TouchExplorationStateChangeListenerImplementor.class
-Mobile/SecurityInAMobile/SecurityInAMobile/SecurityInAMobile.Android/obj/Debug/android/bin/classes/mono/android/support/v4/view/accessibility/AccessibilityManagerCompat_AccessibilityStateChangeListenerImplementor.class
-*.class
-*.class
+**/bin/*
