@@ -4,10 +4,22 @@
              x:Class="SecurityInAMobile.MenuPage">
     <ContentPage.Content>
         <Grid>
-            <Button x:Name="Settings" Text="Settings" Grid.Column="0" Grid.Row="0"
-                    HorizontalOptions="Start" VerticalOptions="Center" Clicked="Settings_Clicked"/>
-            <Button x:Name="Help" Text="Settings" Grid.Column="0" Grid.Row="0"
-                    HorizontalOptions="Start" VerticalOptions="Center" Clicked="Help_Clicked"/>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="400"/>
+            </Grid.RowDefinitions>
+            <Label Text="Menu" Grid.Column="0" Grid.Row="0" VerticalTextAlignment="Center"
+                    HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+            <ListView x:Name="MenuList" Grid.Column="0" Grid.Row="1" 
+                      HorizontalOptions="Center" VerticalOptions="Center"/>
+            <!--
+            <Button x:Name="Home" Text="Home" Grid.Column="0" Grid.Row="1"
+                    HorizontalOptions="Center" VerticalOptions="Center" Clicked="Home_Clicked"/>
+            <Button x:Name="Settings" Text="Settings" Grid.Column="0" Grid.Row="2"
+                    HorizontalOptions="Center" VerticalOptions="Center" Clicked="Settings_Clicked"/>
+            <Button x:Name="Help" Text="Help" Grid.Column="0" Grid.Row="3"
+                    HorizontalOptions="Center" VerticalOptions="Center" Clicked="Help_Clicked"/>
+            -->
         </Grid>
     </ContentPage.Content>
 </ContentPage>

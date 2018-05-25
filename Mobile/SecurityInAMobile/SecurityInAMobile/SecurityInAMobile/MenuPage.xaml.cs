@@ -12,20 +12,33 @@ namespace SecurityInAMobile
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class MenuPage : ContentPage
 	{
-		public MenuPage ()
+        public ListView PupMenuList;
+        public MenuPage ()
 		{
             Title = "Menu";
-            InitializeComponent ();
+            InitializeComponent();
+            PupMenuList = MenuList;
 		}
 
         private void Settings_Clicked(object sender, EventArgs e)
         {
-            App.NavigationPage.Navigation.PushAsync(new SettingsPage());
+            var newPage = new SettingsPage();
+            var oldPage = App.NavigationPage.Navigation.NavigationStack.First();
+            App.NavigationPage.Navigation.InsertPageBefore(newPage, oldPage);
+            App.NavigationPage.PopToRootAsync(false);
         }
 
         private void Help_Clicked(object sender, EventArgs e)
         {
-            App.NavigationPage.Navigation.PushAsync(new HelpPage());
+            var newPage = new HelpPage();
+            var oldPage = App.NavigationPage.Navigation.NavigationStack.First();
+            App.NavigationPage.Navigation.InsertPageBefore(newPage, oldPage);
+            App.NavigationPage.PopToRootAsync(false);
+        }
+
+        private void Home_Clicked(object sender, EventArgs e)
+        {
+            
         }
     }
 }
