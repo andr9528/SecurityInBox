@@ -59,7 +59,7 @@ function getDevices()
                       }
             
             
-            deviceData += "<td> &nbsp; <i class='fas fa-trash '></i> &nbsp; &nbsp; <i class='fas fa-edit'></i> </td>";
+            deviceData += "<td> &nbsp; <i id = 'trashIcon' onClick='deleteDevice(\'"+ device['MAC_Address'] +"\');' class='fas fa-trash '></i> &nbsp; &nbsp; <i id = 'editIcon' class='fas fa-edit'></i> </td>";
             
             tableRows += "<tr>" + deviceData+ "</tr>";
 
@@ -67,6 +67,16 @@ function getDevices()
     
     tableRows = "<tr><th>Host Name</th><th>Device Name</th><th>IP Address</th><th>Status</th><th>Device Settings</th></tr>" + tableRows;
     document.getElementById("table").innerHTML = tableRows;
+}
+
+function deleteDevice(MAC_Address)
+{
+    $.post("api/setDeviceStatus.php", { mac: currentDevice['MAC_Address']).done(function(data) {
+		if(data=="200 OK")
+            {
+               $(".popup").hide(); 
+            }
+	});
 }
 
 //This function loops through the devices array and it checks if the status of device is null then notification appears which displays the data of the device with status=null,if device wont have any ip, the ip won't be shown in the notification window
