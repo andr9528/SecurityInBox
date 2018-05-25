@@ -1,2 +1,3 @@
 Web/InternalWebsite/config.php
-Machine Learning/logfile_*
+logfile_*
+**/__pycache__

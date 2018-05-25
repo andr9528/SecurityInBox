@@ -1,4 +1,0 @@
-pymysql - https://pymysql.readthedocs.io/en/latest/user/examples.html
-possible db remote fix? - https://stackoverflow.com/questions/14779104/how-to-allow-remote-connection-to-mysql
-remote connection - https://chat.stackoverflow.com/rooms/22618/discussion-between-shawn31313-and-suku
-sqlalchemy examples - https://www.pythoncentral.io/introductory-tutorial-python-sqlalchemy/
