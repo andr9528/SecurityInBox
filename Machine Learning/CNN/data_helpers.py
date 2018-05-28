@@ -36,7 +36,7 @@ def load_data_and_labels():
         
         print("Remove space paddings")
         x_text = [[s.strip() for s in t] for t in x_text]       
-
+		
         print("Convert IP to Decimal")
         for e in x_text:
                 e[4] = IPToDec(e[4])
@@ -49,7 +49,11 @@ def load_data_and_labels():
         print("Make pretty numbers!")
         x_text = [[int(s) for s in t] for t in x_text]
                 
-        
+        print("Others")
+        for e in x_text:
+                e[8] = 0
+                e[9] = 0
+		
         #print("Convert to Numbers")
         #x_text = [[make_numbers(s) for s in t] for t in x_text]
         
@@ -95,7 +99,7 @@ def build_vocab(sentences):
         
 def get_data():
         x, y = load_data_and_labels()
-        data = np.array(x, dtype="int64")      
+        data = np.array(x, dtype='int64')      
         labels = np.array(y)
         
         vocabulary, vocabulary_inv = build_vocab(x)

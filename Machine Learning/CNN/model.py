@@ -18,7 +18,10 @@ filter_sizes = [3,4,5]
 num_filters = 512
 drop = 0.5
 
-epochs = 100
+print(x.shape[1])
+input()
+
+epochs = 5
 batch_size = 30
 
 # this returns a tensor
@@ -49,3 +52,11 @@ adam = Adam(lr=1e-4, beta_1=0.9, beta_2=0.999, epsilon=1e-08, decay=0.0)
 model.compile(optimizer=adam, loss='binary_crossentropy', metrics=['accuracy'])
 print("Traning Model...")
 model.fit(X_train, y_train, batch_size=batch_size, epochs=epochs, verbose=1, callbacks=[checkpoint], validation_data=(X_test, y_test))  # starts training
+
+# serialize model to JSON
+model_json = model.to_json()
+with open("model.json", "w") as json_file:
+    json_file.write(model_json)
+# serialize weights to HDF5
+model.save_weights("model.h5")
+print("Saved model to disk")
