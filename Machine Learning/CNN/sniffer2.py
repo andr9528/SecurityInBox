@@ -1,4 +1,3 @@
-from __future__ import print_function
 import socket, sys
 from sys import platform
 from struct import *
@@ -21,7 +20,7 @@ elif platform == "win32":
 	except (msg):
 		print('Socket could not be created.\n\rError Code : ' + str(msg[0]) + '\n\rMessage: ' + msg[1])
 		sys.exit()
-
+		
 # receive a packet
 while True:
 	packet = s.recvfrom(65565)
