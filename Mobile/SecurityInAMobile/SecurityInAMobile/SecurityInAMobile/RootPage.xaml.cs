@@ -12,36 +12,24 @@ namespace SecurityInAMobile
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RootPage : MasterDetailPage
     {
-        public enum MenuItems { Home, Devices, History, Settings, Help }
+        
         public RootPage()
         {
             InitializeComponent();
             MasterBehavior = MasterBehavior.Popover;
 
-            MenuPage.PupMenuList.ItemsSource = Enum.GetValues(typeof(MenuItems)).Cast<MenuItems>();
-            MenuPage.PupMenuList.ItemSelected += MenuList_ItemSelected;
+            //App.NavigationPage.Appearing += OnNavAppearing;
+            App.NavigationPage.PropertyChanged += OnNavChanged;
         }
-        private void MenuList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+
+        private void OnNavChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
-            MenuItems item = (MenuItems)e.SelectedItem;
-
-            var oldPage = App.NavigationPage.Navigation.NavigationStack.First();
-
-
-            switch (item)
-            {
-                case MenuItems.Home:
-                    var newPage = new HomePage();
-                    App.NavigationPage.Navigation.InsertPageBefore(newPage, oldPage);
-                    break;
-                default:
-                    break;
-            }
-
-            App.NavigationPage.PopToRootAsync(false);
-
             IsPresented = false;
-            MenuPage.PupMenuList.SelectedItem = null;
+        }
+
+        private void OnNavAppearing(object sender, EventArgs e)
+        {
+            IsPresented = false;
         }
     }
 }

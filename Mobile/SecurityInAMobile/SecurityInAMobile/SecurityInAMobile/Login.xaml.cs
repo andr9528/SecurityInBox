@@ -32,12 +32,12 @@ namespace SecurityInAMobile
 
                 MenuPage menuPage = new MenuPage();
                 App.NavigationPage = new NavigationPage(new HomePage());
-                RootPage rootPage = new RootPage
+                RootPage RootPage = new RootPage
                 {
                     Master = menuPage,
                     Detail = App.NavigationPage
                 };
-                Application.Current.MainPage = rootPage;
+                Application.Current.MainPage = RootPage;
             }
             else
             {

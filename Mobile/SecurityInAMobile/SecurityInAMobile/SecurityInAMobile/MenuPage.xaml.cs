@@ -12,33 +12,50 @@ namespace SecurityInAMobile
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class MenuPage : ContentPage
 	{
-        public ListView PupMenuList;
+        public enum MenuItems { Home, Devices, History, Settings, Help }
         public MenuPage ()
 		{
             Title = "Menu";
             InitializeComponent();
-            PupMenuList = MenuList;
-		}
 
-        private void Settings_Clicked(object sender, EventArgs e)
-        {
-            var newPage = new SettingsPage();
-            var oldPage = App.NavigationPage.Navigation.NavigationStack.First();
-            App.NavigationPage.Navigation.InsertPageBefore(newPage, oldPage);
-            App.NavigationPage.PopToRootAsync(false);
+            MenuList.ItemsSource = Enum.GetValues(typeof(MenuItems)).Cast<MenuItems>();
         }
-
-        private void Help_Clicked(object sender, EventArgs e)
+        private void MenuList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var newPage = new HelpPage();
+            if (e.SelectedItem == null)
+            {
+                return;
+            }
+            MenuItems item = (MenuItems)e.SelectedItem;
+
             var oldPage = App.NavigationPage.Navigation.NavigationStack.First();
-            App.NavigationPage.Navigation.InsertPageBefore(newPage, oldPage);
-            App.NavigationPage.PopToRootAsync(false);
-        }
+            var newPage = new object();
 
-        private void Home_Clicked(object sender, EventArgs e)
-        {
-            
+            switch (item)
+            {
+                case MenuItems.Home:
+                    newPage = new HomePage();
+                    break;
+                case MenuItems.Devices:
+                    newPage = new MainPage();
+                    break;
+                case MenuItems.History:
+                    newPage = new MainPage();
+                    break;
+                case MenuItems.Settings:
+                    newPage = new SettingsPage();
+                    break;
+                case MenuItems.Help:
+                    newPage = new HelpPage();
+                    break;
+                default:
+                    break;
+            }
+
+            App.NavigationPage.Navigation.InsertPageBefore((Page)newPage, oldPage);
+            App.NavigationPage.PopToRootAsync(false);
+
+            MenuList.SelectedItem = null;
         }
     }
 }

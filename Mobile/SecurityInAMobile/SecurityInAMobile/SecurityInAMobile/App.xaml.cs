@@ -32,12 +32,12 @@ namespace SecurityInAMobile
                 {
                     MenuPage menuPage = new MenuPage();
                     NavigationPage = new NavigationPage(new HomePage());
-                    RootPage rootPage = new RootPage
+                    RootPage RootPage = new RootPage
                     {
                         Master = menuPage,
                         Detail = NavigationPage
                     };
-                    MainPage = rootPage;
+                    MainPage = RootPage;
                 }
                 else
                 {
