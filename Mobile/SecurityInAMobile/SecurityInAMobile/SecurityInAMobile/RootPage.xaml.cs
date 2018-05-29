@@ -18,16 +18,10 @@ namespace SecurityInAMobile
             InitializeComponent();
             MasterBehavior = MasterBehavior.Popover;
 
-            //App.NavigationPage.Appearing += OnNavAppearing;
             App.NavigationPage.PropertyChanged += OnNavChanged;
         }
 
         private void OnNavChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
-        {
-            IsPresented = false;
-        }
-
-        private void OnNavAppearing(object sender, EventArgs e)
         {
             IsPresented = false;
         }

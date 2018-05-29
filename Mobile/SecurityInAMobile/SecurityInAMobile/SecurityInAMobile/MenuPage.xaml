@@ -10,7 +10,7 @@
             </Grid.RowDefinitions>
             <Label Text="Menu" Grid.Column="0" Grid.Row="0" VerticalTextAlignment="Center"
                     HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
-            <ListView x:Name="MenuList" Grid.Column="0" Grid.Row="1" 
+            <ListView x:Name="MenuList" Grid.Column="0" Grid.Row="1"  
                       HorizontalOptions="Center" VerticalOptions="Center" ItemSelected="MenuList_ItemSelected"/>
         </Grid>
     </ContentPage.Content>
