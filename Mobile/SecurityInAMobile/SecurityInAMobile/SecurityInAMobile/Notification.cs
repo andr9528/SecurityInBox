@@ -9,14 +9,7 @@ namespace SecurityInAMobile
         public string Name { get; set; }
         public string Data { get; set; }
         public bool Seen { get; set; }
-        public DateTime Date
-        {
-            get
-            {
-                return DateTime.Now;
-            }
-            set {; }
-        }
+        public DateTime Date { get; set; }
 
         public string DataString
         {

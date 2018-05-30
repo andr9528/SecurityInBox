@@ -24,24 +24,25 @@ namespace SecurityInAMobile
 
         public void PopulateList()
         {
-            notifications.Add(new Notification { Name = "Bob", Data = "He's is mad, bro", Seen = true });
-            notifications.Add(new Notification { Name = "Joe & Hugo", Data = "They're are mad, bro", Seen = false });
+            notifications.Add(new Notification { Name = "Bob", Data = "He's is mad, bro", Seen = true, Date = DateTime.Now });
+            notifications.Add(new Notification { Name = "Joe & Hugo", Data = "They're are mad, bro", Seen = false, Date = DateTime.Now });
 
             NotificationListView.BindingContext = notifications;
+
+            Random random = new Random();
 
             int i = 0;
             while (i < 30)
             {
-                notifications.Add(new Notification { Name = "Hans", Data = "No longer mad, bro", Seen = true });
-                notifications.Add(new Notification { Name = "Franz", Data = "We call him 'no mad'", Seen = false });
+                notifications.Add(new Notification { Name = "Hans", Data = "No longer mad, bro", Seen = true, Date = DateTime.Now.AddDays(-(random.Next(0, 10000))) });
+                notifications.Add(new Notification { Name = "Franz", Data = "We call him 'no mad'", Seen = false, Date = DateTime.Now.AddDays(-(random.Next(0, 10000))) });
                 i++;
             }
         }
 
         public void PutListIntoListView()
         {
-            //notifications.Sort((x, y) => DateTime.Compare(x.Date, y.Date));
-            //notifications.Sort();
+            notifications.Sort((y, x) => DateTime.Compare(x.Date, y.Date));
             ListView NotificationListView = this.FindByName<ListView>("NotificationListView");
             NotificationListView.ItemsSource = notifications;
         }
