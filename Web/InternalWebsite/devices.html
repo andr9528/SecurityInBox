@@ -34,10 +34,22 @@
                 <button onClick="approveClick()" type="button" class=" btn btn-success">Approve device</button>
                 <button onClick="blockClick()" type="button" class=" btn btn-danger">Block device</button>
             </div>
-            
-            <div>
-            <p>Are you sure you want to delete <span id="name">PLACEHOLDER</span>?</p>
-            </div>
+              
+        <!-- The Modal -->
+		<div id="myModal" class="modal">
+
+		  <!-- Modal content -->
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <span class="close">&times;</span>
+			  <span class="modal-title">Notice</span>
+			</div>
+			<div class="modal-body">
+			  <p>Are you sure you want to delete <span id="name">PLACEHOLDER</span>?</p>
+			</div>
+		  </div>
+
+		</div>
             
         </div>
     </body>

@@ -198,7 +198,7 @@ h3 {
     margin: auto;
     padding: 0;
     border: 1px solid #888;
-    width: 40%;
+    width: 40vw;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
@@ -207,7 +207,7 @@ h3 {
 }
 
 .modal-title{
-font-size: 1em;
+font-size: 2vw;
     padding: 20px;
 }
 /* Add Animation */
@@ -217,7 +217,7 @@ font-size: 1em;
 }
 
 @keyframes animatetop {
-    from {top:-300px; opacity:0}
+    from {top:-100px; opacity:0}
     to {top:0; opacity:1}
 }
 
@@ -225,7 +225,7 @@ font-size: 1em;
 .close {
     color: white;
     float: right;
-    font-size: 28px;
+    font-size: 1vw;
     font-weight: bold;
 }
 
@@ -237,14 +237,14 @@ font-size: 1em;
 }
 
 .modal-header {
-    font-size: 35px;
+    font-size: 2vw;
     text-align: center;
-    padding: 20px 16px;
+    padding: 10px 16px;
     background-color: #55ADBF;
     color: white;
 }
 
 .modal-body {
-font-size: 35px;
+font-size: 2vw;
 text-align: center;   
 padding: 1px 16px;}
