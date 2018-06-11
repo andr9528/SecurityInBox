@@ -17,17 +17,20 @@ namespace SecurityInAMobile
             InitializeComponent();
             NotificationListView.ItemsSource = notifications;
             PopulateList();
-            PutListIntoListView();
+            NotificationListView.BindingContext = notifications;
+            PutListIntoListView();            
+
+            //   NotificationListView.IsPullToRefreshEnabled = true;
+
         }
 
         List<Notification> notifications = new List<Notification>();
 
         public void PopulateList()
         {
+
             notifications.Add(new Notification { Name = "Bob", Data = "He's is mad, bro", Seen = true, Date = DateTime.Now });
             notifications.Add(new Notification { Name = "Joe & Hugo", Data = "They're are mad, bro", Seen = false, Date = DateTime.Now });
-
-            NotificationListView.BindingContext = notifications;
 
             Random random = new Random();
 
@@ -45,6 +48,17 @@ namespace SecurityInAMobile
             notifications.Sort((y, x) => DateTime.Compare(x.Date, y.Date));
             ListView NotificationListView = this.FindByName<ListView>("NotificationListView");
             NotificationListView.ItemsSource = notifications;
+        }
+
+        public void OnStuffSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            /*      if (e.SelectedItem == null)
+      {
+          return; //ItemSelected is called on deselection, which results in SelectedItem being set to null
+      }
+  */
+            notifications.Add(new Notification { Name = "ItemClicked", Data = "You Clicked an item!", Seen = false, Date = DateTime.Now });
+            PutListIntoListView();
         }
     }
 }

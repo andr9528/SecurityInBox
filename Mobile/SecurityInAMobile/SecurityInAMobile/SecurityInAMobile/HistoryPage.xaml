@@ -6,7 +6,7 @@
         <ScrollView>
             <StackLayout Padding="0,20,0,0">
                 <Label Text="Notifications" FontAttributes="Bold" HorizontalOptions="Center" />
-                <ListView x:Name="NotificationListView" HasUnevenRows="true">
+                <ListView x:Name="NotificationListView" HasUnevenRows="true" ItemSelected="OnStuffSelected">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
