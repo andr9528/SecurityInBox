@@ -13,6 +13,8 @@ namespace SecurityInAMobile
 		public MainPage()
 		{
 			InitializeComponent();
+
+            
 		}
 	}
 }
