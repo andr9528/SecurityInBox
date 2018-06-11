@@ -40,7 +40,7 @@ namespace SecurityInAMobile
                     newPage = new MainPage();
                     break;
                 case MenuItems.History:
-                    newPage = new MainPage();
+                    newPage = new HistoryPage();
                     break;
                 case MenuItems.Settings:
                     newPage = new SettingsPage();
