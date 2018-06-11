@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SecurityInAMobile.HelpPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <!--#region Definitions --> 
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+                <!--#endregion-->
+                
+                <Label Text="Help"
+                       Grid.Column="0"
+                       Grid.Row="0"
+                       Grid.ColumnSpan="2"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                        />
+                <!--#region Issue names and buttons-->
+                <!--#region Issue 1-->
+                <Label Text="Issue 1"
+                       Grid.Column="0"
+                       Grid.Row="1"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       />
+                <Button Text="Expand"
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        />
+                <!--#endregion-->
+                
+                <!--#region Issue 2-->
+                <Label Text="Issue 2"
+                       Grid.Column="0"
+                       Grid.Row="2"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       />
+                <Button Text="Expand"
+                        Grid.Column="1"
+                        Grid.Row="2"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        />
+                <!--#endregion-->
+
+                <!--#region Issue 3-->
+                <Label Text="Issue 3"
+                       Grid.Column="0"
+                       Grid.Row="3"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       />
+                <Button Text="Expand"
+                        Grid.Column="1"
+                        Grid.Row="3"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        />
+                <!--#endregion-->
+
+                <!--#region Issue 4-->
+                <Label Text="Issue 4"
+                       Grid.Column="0"
+                       Grid.Row="4"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       />
+                <Button Text="Expand"
+                        Grid.Column="1"
+                        Grid.Row="4"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        />
+                <!--#endregion-->
+
+                <!--#region Issue 5-->
+                <Label Text="Issue 5"
+                       Grid.Column="0"
+                       Grid.Row="5"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       />
+                <Button Text="Expand"
+                        Grid.Column="1"
+                        Grid.Row="5"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        />
+                <!--#endregion-->
+
+                <!--#region Issue 6-->
+                <Label Text="Issue 6"
+                       Grid.Column="0"
+                       Grid.Row="6"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       />
+                <Button Text="Expand"
+                        Grid.Column="1"
+                        Grid.Row="6"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        />
+                <!--#endregion-->
+
+                <!--#region Issue 7-->
+                <Label Text="Issue 7"
+                       Grid.Column="0"
+                       Grid.Row="7"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       />
+                <Button Text="Expand"
+                        Grid.Column="1"
+                        Grid.Row="7"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        />
+                <!--#endregion-->
+                <!--#endregion-->
+                
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

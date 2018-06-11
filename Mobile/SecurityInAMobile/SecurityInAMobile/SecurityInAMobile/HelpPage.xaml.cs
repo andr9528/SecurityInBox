@@ -3,16 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace SecurityInAMobile
 {
-    // Legacy Class, kept for old times sake
-	public partial class MainPage : ContentPage
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class HelpPage : ContentPage
 	{
-		public MainPage()
+		public HelpPage ()
 		{
-			InitializeComponent();
+			InitializeComponent ();
 		}
 	}
 }
