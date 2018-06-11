@@ -10,6 +10,8 @@ print("\n\nLoading Data...")
 x,y,z = get_data()
 
 X_train, X_test, y_train, y_test = train_test_split( x, y, test_size=0.2, random_state=42)
+print(X_train)
+input()
 
 sequence_length = x.shape[1]
 vocabulary_size = len(z)
@@ -18,8 +20,6 @@ filter_sizes = [3,4,5]
 num_filters = 512
 drop = 0.5
 
-print(x.shape[1])
-input()
 
 epochs = 5
 batch_size = 30

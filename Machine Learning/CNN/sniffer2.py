@@ -4,6 +4,7 @@ from struct import *
 import base64
 import os
 
+msg = ''
 if platform == "linux" or platform == "linux2":
 	try:
 		s = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_TCP)
@@ -14,7 +15,7 @@ elif platform == "win32":
 	#create an INET, STREAMing socket
 	try:
 		s = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_IP)
-		s.bind(("10.140.68.229", 0))
+		s.bind(("192.168.1.123", 0))
 		s.setsockopt(socket.IPPROTO_IP, socket.IP_HDRINCL, 1)
 		s.ioctl(socket.SIO_RCVALL, socket.RCVALL_ON)
 	except (msg):

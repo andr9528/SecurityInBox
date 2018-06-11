@@ -10,17 +10,30 @@ from load import *
 global model, graph
 model, graph = init()
 
+debug = False
+
 print('Ready')
 
 def make_number(string):
+        if(debug): print("\n==Make String")
         result = 0
+        
+        if(debug): print("Length: " + str(len(string)))
+        if(debug): input()
+        
         if(len(string) == 0):
                 return 0
-        
+       
+        counter = 0
         for x in string:
-                x = ord(x)
-                result = result + x
-                
+                ++counter
+                if(debug): print(counter)
+                if(debug): print("Letter > " + x)
+                y = ord(x)
+                if(debug): print("Number >" + str(y))
+                result = result + y
+        
+        if(debug): print("Result > " + str(result))
         return result
 
 def IPToDec(ip):
@@ -31,41 +44,51 @@ def IPToDec(ip):
         dec3 = int(octs[3])
         return dec0+dec1+dec2+dec3
 
-def convert(str):
-	print(str)
-	str = str.split(";")
-	str = [s.split(':')[-1] for s in str]
-	str = [s.strip() for s in str]     
-	str[4] = IPToDec(str[4])
-	str[5] = IPToDec(str[5])
-	print(str)
-	str[11] = str(make_number(str[11]))
-	
-	str = [int(s) for s in str]
-	
-	str[8] = 0
-	str[9] = 0
+def convert(mystr):
+    print(mystr)
+    mystr = mystr.split(";")
+    mystr = [s.split(':')[-1] for s in mystr]
+    mystr = [s.strip() for s in mystr]     
+    mystr[4] = IPToDec(mystr[4])
+    mystr[5] = IPToDec(mystr[5])
+    mystr[11] = make_number(mystr[11])
+    
+    mystr = [int(s) for s in mystr]
+    
+    mystr[8] = 0
+    mystr[9] = 0
 
-	return str
-	
+    return [mystr]
+    
 
 def predict(str):
-	x = convert(str)
-	with graph.as_default():
-		#perform the prediction
-		out = model.predict(x)
-		print(out)
-		print(np.argmax(out,axis=1))
-		print ("debug3")
-		#convert the response to a string
-		response = np.array_str(np.argmax(out,axis=1))
-		return response	
+    y = convert(str)
+    data = np.array(y, dtype='int64') 
+    
+    if(debug): print(data)
+    
+    with graph.as_default():
+        if(debug): print(data.shape)
+        #perform the prediction
+        out = model.predict(data)
+        if(debug): print(out)
+        if(debug): print(np.argmax(out,axis=1))
+        if(debug): print ("==debug point==")
+        #convert the response to a string
+        response = np.array_str(np.argmax(out,axis=1))
+        return response    
 
 
-#p = Popen('sniffer2.py', stdout = PIPE, stderr = STDOUT, shell = True)	
-#while True:
-#	line = p.stdout.readline()
-#	prediction = predict(line[:-4].decode("utf8"))
-#	if not line: break
-
+tstr = "Version: 4; IP Header Length: 5; TTL: 64; Protocol: 6; Source Address: 172.17.0.2; Destination Address: 172.17.0.1; Source Port: 22; Dest Port: 55190; Sequence Number: 4030215297; Acknowledgement: 4060907643; TCP header length: 8; Data: 5o/Xqg/6APXNsJiYPTfJsPecZuw5AmHqkXEV51KP29SKD4jTGS31vzv7KGaDsKjRRnwKmg=="
+        
+p = Popen('sniffer2.py', stdout = PIPE, stderr = STDOUT, shell = True)    
+while True:
+    line = p.stdout.readline()
+    if not line: break
+    if(debug): print(line)
+    prepare = line[:-4].decode("utf8")
+    if(debug): print(prepare)
+    prediction = predict(prepare)
+    
+    print(prediction)
 
