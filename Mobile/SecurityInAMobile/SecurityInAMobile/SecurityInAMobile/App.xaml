@@ -4,6 +4,7 @@
              x:Class="SecurityInAMobile.App">
 	<Application.Resources>
 
-		
+		<!-- Application resource dictionary -->
+
 	</Application.Resources>
 </Application>

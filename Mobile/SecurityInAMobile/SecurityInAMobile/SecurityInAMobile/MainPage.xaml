@@ -3,13 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:SecurityInAMobile"
              x:Class="SecurityInAMobile.MainPage">
-    <StackLayout BackgroundColor="Azure">
 
-        <Label Text="im main page" Margin="100,0,100,0" TextColor="Black" FontSize="20"
-               HorizontalTextAlignment="Center"
-               VerticalTextAlignment="Center">
-           
-        </Label>
-        
-    </StackLayout>
+	<Label Text="Welcome to Xamarin.Forms!" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+
 </ContentPage>
