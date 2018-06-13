@@ -21,8 +21,10 @@ function updateDeviceList()
     setTimeout(updateDeviceList, 1000);
 }
 
-$(document).ready(function(){
-    updateDeviceList();
+//This jQuery syntax makes sure the HTML has loaded before the JS so the code wouldn't run on html content that haven't been created yet
+$(document).ready(function()
+{ 
+    updateDeviceList(); 
 });
 
 //This function loops through the devices array and and shows the data I want in the html table, it checks if status i 1 or 2 and posts it as a word "Approved" or "Blocked"
