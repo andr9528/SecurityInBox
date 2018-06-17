@@ -9,6 +9,7 @@ body
     background-color: #EEEEEE ! important;
     min-height: 100%;
     font-family: "Verdana";
+    padding-top: 20px;
 }
 
 
@@ -166,6 +167,13 @@ padding:0 ! important;
     padding-left: 0 ! important;
 }
 
+.btn-responsive {
+    white-space: normal !important;
+    word-wrap: break-word;
+    font-size: 1vmax;
+    margin:3px;
+}
+
 img {
     padding-top: 20px;
     width: 25%;
@@ -182,7 +190,7 @@ h3 {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    padding-top: 10%; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -194,11 +202,11 @@ h3 {
 /* Modal Content */
 .modal-content {
     position: relative;
-    background-color: #E4E5E5;
+    background-color: #EEEEEE;
     margin: auto;
-    padding: 0;
-    border: 1px solid #888;
-    width: 40vw;
+    padding-bottom: 10px;
+    
+    width: 30%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
@@ -207,8 +215,15 @@ h3 {
 }
 
 .modal-title{
-font-size: 2vw;
-    padding: 20px;
+    font-size: 1.5vmax;
+    
+    text-align: center;
+    padding: 10px 16px;
+    
+    background-color: #0F5896;
+    color: white;
+    
+    
 }
 /* Add Animation */
 @-webkit-keyframes animatetop {
@@ -237,14 +252,15 @@ font-size: 2vw;
 }
 
 .modal-header {
-    font-size: 2vw;
-    text-align: center;
+    
     padding: 10px 16px;
-    background-color: #55ADBF;
+    
+    background-color: #0F5896;
     color: white;
 }
 
 .modal-body {
-font-size: 2vw;
+font-size: 1.5vmax;
 text-align: center;   
-padding: 1px 16px;}
+padding: 1px 16px;
+}

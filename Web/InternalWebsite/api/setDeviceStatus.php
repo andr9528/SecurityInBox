@@ -16,7 +16,7 @@
 		die("422 Unprocessable Entity: status Parameter Invalid.");
 	}
 	
-	$DB->query("UPDATE Devices SET Approved = '{$Status}' WHERE MAC_Address = '{$MAC}'");
+	$DB->query("UPDATE Devices SET Status = '{$Status}' WHERE MAC_Address = '{$MAC}'");
 	
 	header("HTTP/1.1 200 OK");
 	echo "200 OK";

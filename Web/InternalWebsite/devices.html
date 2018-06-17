@@ -20,7 +20,7 @@
     
     <body>
         <div class="barRox">DEVICES</div>
-        <div class="containerRox">
+        <div class="containerRox" style="overflow-x:auto;">
             
             <table id="table">
                 
@@ -31,8 +31,8 @@
                 
                 <p id="deviceDataNotification"> </p>
                 
-                <button onClick="approveClick()" type="button" class=" btn btn-success">Approve device</button>
-                <button onClick="blockClick()" type="button" class=" btn btn-danger">Block device</button>
+                <button onClick="approveClick()" type="button" class=" btn btn-success btn-responsive">Approve device</button>
+                <button onClick="blockClick()" type="button" class=" btn btn-danger btn-responsive">Block device</button>
             </div>
               
         <!-- The Modal -->
@@ -40,12 +40,17 @@
 
 		  <!-- Modal content -->
 		  <div class="modal-content">
-			<div class="modal-header">
-			  <span class="close">&times;</span>
-			  <span class="modal-title">Notice</span>
-			</div>
+              
+			
+			  <div class="modal-title">Notice</div>
+			
+              
 			<div class="modal-body">
-			  <p>Are you sure you want to delete <span id="name">PLACEHOLDER</span>?</p>
+                
+			  <p>Are you sure you want to delete this device?</p>
+                <button onClick="deleteDevice()" type="button" class="btn btn-success btn-responsive">Delete device</button>
+                <button onClick="exitModal()" type="button" class="btn btn-success btn-responsive">Exit</button>
+                
 			</div>
 		  </div>
 
